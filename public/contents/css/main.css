@@ -1,0 +1,975 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'BHoma';
+    src: url('http://fontonline.ir/fonts/BHoma.eot?#') format('eot'),
+    url('http://fontonline.ir/fonts/BHoma.ttf') format('truetype'),
+    url('http://fontonline.ir/fonts/BHoma.woff') format('woff');
+    unicode-range: U+30-39;
+}
+@font-face {
+    font-family: Parastoo;
+    src: url(../fonts/Parastoo.eot);
+    src: url(../fonts/Parastoo.eot?#iefix) format('FontName-opentype'), url(../fonts/Parastoo.woff) format('woff'), url(../fonts/Parastoo.woff2) format('woff2'), url(../fonts/Parastoo.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: Vazir;
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot);
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.eot?#iefix) format('embedded-opentype'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff2) format('woff2'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.woff) format('woff'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.ttf) format('truetype');
+    font-weight: 400
+}
+@font-face {
+    font-family: Vazir;
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.eot);
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.eot?#iefix) format('embedded-opentype'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.woff2) format('woff2'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.woff) format('woff'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Bold.ttf) format('truetype');
+    font-weight: 700
+}
+@font-face {
+    font-family: Vazir;
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot);
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.eot?#iefix) format('embedded-opentype'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff2) format('woff2'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.woff) format('woff'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Light.ttf) format('truetype');
+    font-weight: 300
+}
+@font-face {
+    font-family: Vazir;
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.eot);
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.eot?#iefix) format('embedded-opentype'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.woff2) format('woff2'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.woff) format('woff'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Medium.ttf) format('truetype');
+    font-weight: 500
+}
+@font-face {
+    font-family: Vazir;
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.eot);
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.eot?#iefix) format('embedded-opentype'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.woff2) format('woff2'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.woff) format('woff'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Thin.ttf) format('truetype');
+    font-weight: 100
+}
+@font-face {
+    font-family: Vazir;
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.eot);
+    src: url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.eot?#iefix) format('embedded-opentype'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.woff2) format('woff2'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.woff) format('woff'), url(https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir-Black.ttf) format('truetype');
+    font-weight: 900
+}
+
+:root {
+    --theme-primary: #e91e63;
+}
+a, blockquote, body, code, div, font, form, h1, h2, h3, h4, h5, h6, html, img, label, li, p, pre, q, s, span, table, ul, var {
+    font-family: inherit;
+    font-weight: inherit;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-image-width: 0;
+}
+
+.bg-danger, .btn-danger{
+    background-color: var(--theme-primary)!important;
+}
+.text-danger {
+    color: var(--theme-primary)!important;
+}
+:focus {
+    outline: 0
+}
+
+input:focus {
+    outline: 0
+}
+
+body {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    overflow-x: hidden
+}
+
+ul {
+    list-style: none
+}
+body {
+    font-size: 13px;
+    background: #f5f5f5;
+    color: #222;
+    font-family: 'BHoma', Vazir, Arial, "Helvetica Neue", Helvetica, sans-serif!important;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.site-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    color: #888;
+    text-shadow: 1px 1px 1px #949494
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+.container {
+    width: 90%
+}
+
+.left {
+    float: left !important
+}
+
+.right {
+    float: right !important
+}
+
+a {
+    color: #949494;
+    text-decoration: none;
+    line-height: inherit;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease
+}
+
+a:focus, a:hover {
+    color: #666
+}
+
+a img {
+    border: none
+}
+
+#header-wrapper {
+    position: absolute;
+    background: var(--theme-primary);
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .12);
+    -moz-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .12);
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, .12);
+    z-index: 10000
+}
+
+.top-bar {
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    -webkit-transition: height .4s ease-out;
+    -moz-transition: height .4s ease-out;
+    -o-transition: height .4s ease-out;
+    transition: height .4s ease-out
+}
+
+.top-bar-section li.megamenu {
+    width: 100%
+}
+
+.top-bar-section li.megamenu > .dropdown {
+    min-width: 100%;
+    right: auto;
+    left: 100%
+}
+
+.top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown, .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > .dropdown {
+    width: 210px
+}
+
+.top-bar ul {
+    margin-bottom: 0;
+    list-style: none
+}
+
+.top-bar .row {
+    max-width: none
+}
+
+.top-bar form, .top-bar input {
+    margin-bottom: 0
+}
+
+.top-bar input {
+    height: 2.45em
+}
+
+.top-bar .button {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: 0
+}
+
+.top-bar .name, .top-bar .name a {
+    line-height: 100px;
+    height: 100px
+}
+
+.top-bar .name a {
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+    width: 50%;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none
+}
+
+.top-bar-section {
+    position: relative;
+    left: 0;
+    width: auto;
+    -webkit-transition: left .35s cubic-bezier(.58, .25, .2, .93);
+    -moz-transition: left .35s cubic-bezier(.58, .25, .2, .93);
+    -o-transition: left .35s cubic-bezier(.58, .25, .2, .93);
+    transition: left .35s cubic-bezier(.58, .25, .2, .93)
+}
+
+.top-bar-section ul {
+    width: 100%;
+    margin: 0
+}
+
+.top-bar-section .divider, .top-bar-section [role=separator] {
+    border-bottom: solid 1px #f4f4f4;
+    border-top: solid 1px #f4f4f4;
+    clear: both;
+    height: 1px;
+    width: 100%
+}
+
+.top-bar-section ul li > a {
+    display: block;
+    width: 100%;
+    color: #fff;
+    padding: 12px 0;
+    font-size: 1em;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: ã€€none
+}
+
+.top-bar-section ul li.active > a {
+    background: #fff;
+    color: #949494
+}
+
+.top-bar-section .has-form {
+    padding: 15px
+}
+
+.top-bar-section ul.dropdown li:not(.has-dropdown) > a:hover {
+    color: var(--theme-primary);
+}
+
+.top-bar-section .dropdown {
+    position: absolute;
+    left: 100%;
+    visibility: hidden;
+    opacity: 0
+}
+
+.top-bar-section .dropdown li {
+    width: 100%;
+    height: auto
+}
+
+.top-bar-section .dropdown li a {
+    white-space: nowrap;
+    font-weight: 400;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none
+}
+
+.top-bar-section .dropdown label {
+    padding: 8px 15px 2px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 700;
+    font-size: .625em
+}
+
+.top-bar-js-breakpoint {
+    width: 900px !important;
+    visibility: hidden
+}
+
+a.menu-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    padding: 0;
+    color: #fff;
+    position: relative
+}
+
+a.menu-icon span {
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0;
+    left: .8125rem;
+    top: .3125rem;
+    -webkit-box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff;
+    box-shadow: 0 10px 0 1px #fff, 0 16px 0 1px #fff, 0 22px 0 1px #fff
+}
+
+a.menu-icon:hover span {
+    -webkit-box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3;
+    box-shadow: 0 10px 0 1px #b3b3b3, 0 16px 0 1px #b3b3b3, 0 22px 0 1px #b3b3b3
+}
+
+@media only screen and (min-width: 900px) {
+    #top, .top-bar {
+        -webkit-transition: height .2s linear !important;
+        -moz-transition: height .2s linear !important;
+        -o-transition: height .2s linear !important;
+        transition: height .2s linear !important
+    }
+
+    .top-bar .name a, .top-bar-section > ul > li > a {
+        -webkit-transition: line-height .18s linear, color .5s ease !important;
+        -moz-transition: line-height .18s linear, color .5s ease !important;
+        -o-transition: line-height .18s linear, color .5s ease !important;
+        transition: line-height .18s linear, color .5s ease !important
+    }
+
+    .top-bar-section ul li {
+        position: relative
+    }
+
+    .top-bar-section > ul > li li.has-dropdown:hover > .dropdown {
+        opacity: 1
+    }
+
+    #top {
+        background: #fff;
+        width: 100%
+    }
+
+    .top-bar-section > ul > li[class*=current] > a {
+        color: #949494
+    }
+
+    .top-bar {
+        overflow: visible
+    }
+
+    .top-bar:after, .top-bar:before {
+        display: table
+    }
+
+    .top-bar:after {
+        clear: both
+    }
+
+    .top-bar .name a {
+        width: auto
+    }
+
+    .top-bar .button, .top-bar input {
+        line-height: 2em;
+        font-size: .9em;
+        height: 2em;
+        padding: 0 10px;
+        position: relative;
+        top: 8px
+    }
+
+    .top-bar-section {
+        margin-top: 0;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+        left: 0 !important
+    }
+
+    .top-bar-section ul {
+        width: auto
+    }
+
+    .top-bar-section ul li {
+        float: left
+    }
+
+    .top-bar-section li a:not(.button) {
+        line-height: 35px;
+        padding: 0 15px
+    }
+
+    .top-bar-section .has-dropdown > a {
+        padding-right: 15px !important;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none
+    }
+
+    .top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+        border: none;
+        content: "";
+        margin-top: -16px;
+        right: 5px
+    }
+
+    .top-bar-section li .dropdown {
+        left: 0;
+        background: 0 0;
+        min-width: 210px
+    }
+
+    .top-bar-section .dropdown li a {
+        color: #000;
+        line-height: 2.3;
+        padding: 7px 15px;
+        -webkit-transition: background-color .5s ease, color .5s ease;
+        -moz-transition: background-color .5s ease, color .5s ease;
+        -o-transition: background-color .5s ease, color .5s ease;
+        transition: background-color .5s ease, color .5s ease
+    }
+
+    .top-bar-section .dropdown li {
+        background-color: #fff
+    }
+
+    .top-bar-section .dropdown li label {
+        white-space: nowrap;
+        background: #1e1e1e
+    }
+
+    .top-bar-section li.empty-megamenu {
+        height: 37px;
+        background-color: #fff
+    }
+
+    .top-bar-section li:not(.megamenu) .dropdown li .dropdown {
+        left: 100%;
+        top: 0
+    }
+
+    .top-bar-section > ul > .divider, .top-bar-section > ul > [role=separator] {
+        border-bottom: none;
+        border-top: none;
+        border-right: solid 1px #fff;
+        border-left: solid 1px #fff;
+        clear: none;
+        height: 45px;
+        width: 0
+    }
+
+    .top-bar-section .has-form {
+        background: #111;
+        padding: 0 15px;
+        height: 45px
+    }
+
+    .top-bar-section ul.right li:not(.megamenu) .dropdown {
+        right: auto;
+        left: 0
+    }
+
+    .top-bar-section ul.right li .dropdown li .dropdown {
+        left: 100%
+    }
+
+    .top-bar-section li.megamenu {
+        width: auto !important
+    }
+
+    .top-bar-section li.megamenu > .dropdown {
+        left: auto !important
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > a {
+        position: relative;
+        display: inline-block;
+        top: 0;
+        margin: 0;
+        max-width: 150px
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown {
+        position: absolute
+    }
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > a {
+        border-color: black!important;
+        border-bottom-width: 1px;
+        border-bottom-style: inset;
+    }
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown:hover > a {
+        border-color: var(--theme-primary)!important;
+        color: var(--theme-primary);
+    }
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown:last-child > .dropdown > li:last-child {
+        border-radius: 0 0 15px 0
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown:first-child > .dropdown > li:last-child {
+        border-radius: 0 0 0 15px
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li > .dropdown > li a {
+        padding-top: 4px !important;
+        padding-bottom: 4px !important;
+        height: 37px
+    }
+
+    .top-bar-section > ul > li.megamenu .dropdown a {
+        padding-left: 17px
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li {
+        padding-top: 3px !important
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li > a {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 12px;
+        padding-bottom: 25px !important
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li > .dropdown > li:last-child {
+        height: 50px !important
+    }
+
+    .top-bar-section > ul > li.megamenu:hover > .dropdown > li.has-dropdown {
+        visibility: visible;
+        opacity: 1
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > a {
+        max-width: 100% !important;
+        display: inline-block;
+        float: left;
+        margin: 0 !important;
+        color: #000;
+
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > .dropdown {
+        left: 0 !important;
+        top: 45px
+    }
+
+    .top-bar-section > ul > li.megamenu:hover > .dropdown > li.has-dropdown > .dropdown {
+        visibility: visible;
+        opacity: 1
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > .dropdown {
+        max-height: 900px;
+    }
+
+    .no-js .top-bar-section ul li:hover > a {
+        color: #fff
+    }
+
+    .no-js .top-bar-section ul li:active > a {
+        color: #fff
+    }
+
+    .no-js .top-bar-section .has-dropdown:hover > .dropdown {
+        visibility: visible
+    }
+    .top-bar-section li.hippo-menu-hovered:hover > .dropdown, .top-bar-section li.hippo-menu-hovered > .dropdown, .top-bar-section li.hippo-menu-hovered.megamenu .dropdown, .top-bar-section li.hippo-menu-hovered.megamenu:hover .dropdown {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown, .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > .dropdown {
+        width: 295px
+    }
+
+    .top-bar-section li.empty-megamenu {
+        height: 41px
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li > .dropdown > li:not(:last-child):not(:first-child) a {
+        padding-top: 6px !important;
+        padding-bottom: 6px !important;
+        height: 41px
+    }
+
+    .top-bar-section > ul > li.megamenu .dropdown a {
+        padding-left: 30px !important
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li {
+        padding-top: 10px !important;
+        padding-bottom: 5px !important
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li > a {
+        padding-bottom: 10px !important
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li > .dropdown > li:last-child {
+        height: 55px !important
+    }
+
+    .top-bar-section > ul > li.megamenu > .dropdown > li.has-dropdown > .dropdown {
+        top: 55px !important
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .box-layout #header-wrapper {
+        max-width: 1200px !important
+    }
+}
+
+#nav-down {
+    border-radius: 50px
+}
+
+* {
+    margin: 0;
+    border-box: box-sizing
+}
+
+body {
+    background-color: #fff;
+    border-box: box-sizing;
+    padding: 0;
+    border-top-color: var(--theme-primary);
+    border-top-style: solid;
+    border-top-width: 2px;
+    direction: rtl;
+}
+
+.btndowntoup {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/images/top11.png);
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 1
+}
+
+.company {
+    display: block;
+    width: 100%;
+    text-align: center;
+    min-height: 30px;
+    padding: 3px;
+    font-size: 16px
+}
+.company.bg-danger {
+    opacity: 0.8!important;
+}
+.footer-bottom {
+    width: 100%;
+    min-height: 50px;
+    height: auto;
+    color: #fff;
+    background-color: #666;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 5px;
+    overflow: hidden
+}
+
+.footer-dark {
+    padding: 20px 0;
+    color: #f0f9ff;
+}
+
+.footer-dark h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 16px
+}
+
+.footer-dark ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0
+}
+
+.footer-dark ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: .6
+}
+
+.footer-dark ul a:hover {
+    opacity: .8
+}
+
+@media (max-width: 767px) {
+    .footer-dark .item:not(.social) {
+        text-align: center;
+        padding-bottom: 20px
+    }
+}
+
+.footer-dark .item.text {
+    margin-bottom: 36px
+}
+
+@media (max-width: 767px) {
+    .footer-dark .item.text {
+        margin-bottom: 0
+    }
+}
+
+.footer-dark .item.text p {
+    opacity: .6;
+    margin-bottom: 0
+}
+
+.footer-dark .item.social {
+    text-align: center
+}
+
+@media (max-width: 991px) {
+    .footer-dark .item.social {
+        text-align: center;
+        margin-top: 20px
+    }
+}
+
+.footer-dark .item.social > a {
+    font-size: 20px;
+    width: 34px;
+    height: 34px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .4);
+    margin: 0 8px;
+    color: #fff;
+    opacity: .75
+}
+
+.footer-dark .item.social > a:hover {
+    opacity: .9;
+    background-color: #71b8ff
+}
+
+.footer-dark .copyright {
+    text-align: center;
+    padding-top: 24px;
+    opacity: .3;
+    font-size: 13px;
+    margin-bottom: 0
+}
+
+footer {
+    margin-top: 10px;
+    height: auto;
+    padding: 20px
+}
+
+.rtl {
+    direction: rtl !important;
+    text-align: right
+}
+
+.ltr {
+    direction: ltr !important;
+    text-align: left
+}
+
+
+
+.divider {
+    color: #000;
+    padding: 5px;
+    height: 100%
+}
+
+a {
+    text-decoration: none !important
+}
+
+.inline * {
+    display: inline
+}
+
+.header {
+    background-color: #fff;
+    margin: 0
+}
+
+
+.shop-heading {
+    border-bottom: 2px solid var(--theme-primary);
+}
+
+@media screen and (min-width: 992px) {
+    .bazaar .card-head {
+        padding: 10px
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .bazaar .card-head {
+        height: auto;
+        align-items: center
+    }
+}
+
+.bazaar .card-head {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    height: 34px
+}
+
+button {
+    transition-duration: .4s
+}
+
+.bazaar .card-content {
+    padding-bottom: 45px;
+    color: #000
+}
+
+.text-muted.d-lg-flex.d-xl-flex.align-items-lg-center.pre-price {
+    text-decoration: line-through
+}
+.cart-add {
+    display: none;
+    overflow: hidden!important;
+
+}
+.btn-wrapper button {
+    overflow: hidden!important;
+    height: 34px!important;
+}
+
+/*.card:hover .cart-add {
+    display: inline
+}*/
+
+.divider-style {
+    margin-top: 25px;
+    position: relative;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+.divider-style span {
+    background: #ffffff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5
+}
+
+.divider-style:before {
+    content: "";
+    display: block;
+    border-top: solid 1px var(--theme-primary);
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    z-index: 1
+}
+#new-products button, #popular-products button {
+    margin-top: -100px;
+    margin-right: 20px;
+}
+
+@media screen and (min-width: 768px){
+}
+.card:hover > button *{
+    visibility: visible;
+    width: 100px;
+}
+
+
+span.badge {
+    margin: 0 0 2px -20px!important;
+}
+
+
+
+.btn-wrapper button {
+    float: right!important;
+    text-align: right!important;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.76);
+    z-index: 1000;
+}
+
+
+
+
+
+.col-6.text-center.sell-card {
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.row.rtl.sell {
+    background-color: #e8e8e8;
+}
+
+.text-center.sell-card {
+    padding: 5px 0;
+}
+
+.text-center.social-links > a > img {
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.list-group-horizontal-lg .list-group-item > a > img {
+    width: 125px;
+}
+
+.list-group-horizontal-lg .list-group-item {
+    border: none!important;
+}
+
+.list-group-horizontal-lg .list-group-item:first-child {
+}
+
+.list-group-horizontal-lg .list-group-item > h6 {
+    margin-bottom: 10px;
+}
+
+
+.text-center.text-dark {
+}
+
+
+
+.card > .card-header {
+    border: none;
+}
+

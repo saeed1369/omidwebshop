@@ -1,0 +1,15 @@
+@font-face {
+    font-family:Parastoo;
+    src: url('../font/Parastoo.eot');
+    src: url('../font/Parastoo.eot?#iefix') format('FontName-opentype'),
+    url('../font/Parastoo.woff') format('woff'),
+    url('../font/Parastoo.woff2') format('woff2'),
+    url('../font/Parastoo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+
+
+    font-family: Parastoo, 'Segoe UI', Tahoma, sans-serif !important;
+}
